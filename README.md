@@ -5,7 +5,7 @@ GUI Version:
 Using Tkinter
 
 
-#No GUI Version:
+No GUI Version:
 Installation:
 - ```pip install pyfiglet```
 
@@ -16,7 +16,7 @@ Usage:
 - The program will show all open ports between 1 and 65535
 - READY!
 
-#GUI Version
+GUI Version
 Usage:
 - Start the script
 - Enter the Host Name or IP into the input box

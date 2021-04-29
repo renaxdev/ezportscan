@@ -4,32 +4,26 @@ import sys
 import socket
 from datetime import datetime
    
-
 root = Tk()
 root.withdraw()
 
 target = simpledialog.askstring("Target IP", "Enter Target IP")
 
-
 ascii_banner = pyfiglet.figlet_format("ezPortscan")
 print(ascii_banner)
 print("\nby Renax")
   
-# Add Banner 
 print("-" * 50)
 print("Scanning Target: " + target)
 print("Scanning started at:" + str(datetime.now()))
 print("-" * 50)
 messagebox.showinfo("Scanning...", "Scanning Target: " + target)
    
-try:
-      
-    # will scan ports between 1 to 65,535
+try:     
     for port in range(1,65535):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
           
-        # returns an error indicator
         result = s.connect_ex((target,port))
         if result ==0:     
             print("Port {} is open".format(port))

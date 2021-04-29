@@ -1,45 +1,45 @@
-import pyfiglet
+#-----Libraries-----#
+import pyfiglet # For Text to Ascii (install with pip pyfiglet)
 import sys
 import socket
 from datetime import datetime
    
+
+#Start Banner
 ascii_banner = pyfiglet.figlet_format("ezPortscan")
 print(ascii_banner)
-print("by Renax")
+print("\nby Renax")
    
-# Defining a target
+
 if len(sys.argv) == 2:
-      
-    # translate hostname to IPv4
-    target = socket.gethostbyname(sys.argv[1]) 
+    target = socket.gethostbyname(sys.argv[1]) #Hostname to IPv4
 else:
-    print("Invalid ammount of Argument")
+    print("Invalid amount of Arguments")
   
-# Add Banner 
+#Simple Banner
 print("-" * 50)
 print("Scanning Target: " + target)
-print("Scanning started at:" + str(datetime.now()))
+print("Started at:" + str(datetime.now()))
 print("-" * 50)
    
 try:
-      
-    # will scan ports between 1 to 65,535
     for port in range(1,65535):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
           
-        # returns an error indicator
         result = s.connect_ex((target,port))
         if result ==0:
             print("Port {} is open".format(port))
         s.close()
           
-except KeyboardInterrupt:
-        print("\n Exiting Program!")
+
         sys.exit()
 except socket.gaierror:
         print("\n Hostname Could Not Be Resolved!")
         sys.exit()
 except socket.error:
-        print("\n Server not responding!")
+        print("\n Server is not responding!")
         sys.exit()
+
+except KeyboardInterrupt:
+        print("\n Exiting Program!")

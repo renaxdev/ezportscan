@@ -5,19 +5,18 @@ GUI Version:
 Using Tkinter
 
 
-No GUI Version:
 Installation:
 - ```pip install pyfiglet```
 
-Usage:
+NO GUI - Usage:
 - Open your Termial
 - Type in ```python ezPortscan.py TARGET-IP```
 - Wait a bit
 - The program will show all open ports between 1 and 65535
 - READY!
 
-GUI Version
-Usage:
+
+GUI - Usage:
 - Start the script
 - Enter the Host Name or IP into the input box
 - Wait a bit

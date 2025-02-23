@@ -1,3 +1,8 @@
+"""
+Created by Maximilian Körner
+https://mkoerner.dev
+"""
+
 #-----Libraries-----#
 import pyfiglet # For Text to Ascii (install with pip pyfiglet)
 import sys

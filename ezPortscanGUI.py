@@ -1,3 +1,8 @@
+"""
+Created by Maximilian Körner
+https://mkoerner.dev
+"""
+
 from tkinter import messagebox, simpledialog, Tk
 import pyfiglet
 import sys

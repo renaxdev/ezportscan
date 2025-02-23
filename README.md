@@ -1,5 +1,5 @@
 # ezportscan
-An easy Portscanner written Python.
+An easy Portscanner written in Python.
 
 GUI Version:
 Using Tkinter
